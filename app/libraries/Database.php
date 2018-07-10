@@ -33,7 +33,7 @@ class Database
         $this->stmt = $this->dbh->prepare($sql);
     }
 
-    public function bind($param, $value, $type)
+    public function bind($param, $value, $type = null)
     {
         if (is_null($type)) {
             switch (true) {
@@ -72,6 +72,6 @@ class Database
 
     public function rowCount()
     {
-        return $this->stmt->rowCout();
+        return $this->stmt->rowCount();
     }
 }
