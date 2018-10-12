@@ -16,7 +16,6 @@ class Core
     {
 //        print_r($this->getURL());
         $url = $this->getURL();
-
         // Look for the Controller in Controllers folder
         if (file_exists('../app/controllers/' . ucwords($url[0]) . '.php')) {
 

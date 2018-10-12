@@ -1,0 +1,17 @@
+{
+    "name": "kaperskyguru/kapframework",
+    "type": "project",
+    "require": {
+        "vlucas/phpdotenv": "^2.5"
+    },
+    "autoload": {
+        "psr-4": {"kapframework\\": "App/"}
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Solomon Eseme",
+            "email": "solomoneseme@gmail.com"
+        }
+    ]
+}
