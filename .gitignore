@@ -1,3 +1,2 @@
 /vendor/
 .env
-/app/libraries/Logger.php

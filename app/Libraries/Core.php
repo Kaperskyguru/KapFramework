@@ -1,11 +1,12 @@
 <?php
-
+namespace App\Libraries;
 /**
  * Created by PhpStorm.
  * User: Kapersky Guru
  * Date: 5/20/2018
  * Time: 1:09 AM
  */
+ // use App;
 class Core
 {
     protected $currentController = 'Pages';
@@ -14,11 +15,9 @@ class Core
 
     public function __construct()
     {
-//        print_r($this->getURL());
         $url = $this->getURL();
         // Look for the Controller in Controllers folder
-        if (file_exists('../app/controllers/' . ucwords($url[0]) . '.php')) {
-
+        if (file_exists(dirname(__DIR__).'/controllers/' . ucwords($url[0]) . '.php')) {
             // If exist, Set as current Controller
             $this->currentController = ucwords($url[0]);
 
@@ -26,8 +25,7 @@ class Core
             unset($url[0]);
         }
 
-        // Require the controller file
-        require_once '../app/controllers/' . $this->currentController . '.php';
+        $this->currentController = 'App'.'\\'. 'Controllers' .'\\' .$this->currentController;
 
         // Instantiate the controller class
         $this->currentController = new $this->currentController;

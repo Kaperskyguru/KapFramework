@@ -2,10 +2,11 @@
     "name": "kaperskyguru/kapframework",
     "type": "project",
     "require": {
-        "vlucas/phpdotenv": "^2.5"
+        "vlucas/phpdotenv": "^2.5",
+        "monolog/monolog": "^1.23"
     },
     "autoload": {
-        "psr-4": {"kapframework\\": "App/"}
+        "psr-4": {"App\\": "app/"}
     },
     "license": "MIT",
     "authors": [

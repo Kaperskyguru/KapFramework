@@ -1,4 +1,8 @@
 <?php
+//Setting up ENV function
+function env($name){
+    return getenv($name);
+}
 /**
  * Created by PhpStorm.
  * User: Kapersky Guru
@@ -10,12 +14,7 @@
 define('APPROOT', dirname(dirname(__FILE__)));
 
 // Define Site URL e.g http://localhost/kapframework
-define('SITEURL', '_YOUR_URL');
+define('SITEURL', env("SITEURL"));
 
 // Define Site name
-define('SITENAME', '_YOUR_SITE_NAME');
-
-//Setting up ENV function
-function env($name){
-    return getenv($name);
-}
+define('SITENAME', env("SITENAME"));
