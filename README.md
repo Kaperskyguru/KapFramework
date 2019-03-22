@@ -9,6 +9,8 @@ This is a basic laravel-oriented PHP framework for developers to create, edit an
 
 # Installation
 To install, simply clone this repo to your project directory and merge accordingly.
+1. To install dependencies
+    composer install
 
 # Usuage
 Replace the values in the config file and change the values in the .htaccess files to suit yours.
